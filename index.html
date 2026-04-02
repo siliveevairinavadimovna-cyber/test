@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Памятка: Маркеры отбора кандидатов</title>
+    <script type="module" src="./iframeResizer.contentWindow.js"></script>
+    <style>
+        :root {
+            --primary-bg: #f4f7f6;
+            --card-bg: #ffffff;
+            --accent-blue: #3498db;
+            --accent-green: #2ecc71;
+            --accent-red: #e74c3c;
+            --text-main: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #1a2a6c;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-top: 6px solid;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Цвета для заголовков и рамок */
+        .card-experience { border-color: var(--accent-green); }
+        .card-education { border-color: var(--accent-blue); }
+        .card-stop { border-color: var(--accent-red); }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin: 0 0 15px 0;
+            color: #1a2a6c;
+            line-height: 1.2;
+        }
+
+        /* Одинаковый шрифт и выравнивание по ширине для всех блоков */
+        .card p {
+            font-size: 16px; /* Одинаковый размер шрифта */
+            line-height: 1.7;
+            text-align: justify; /* Выравнивание по ширине */
+            margin: 0;
+            hyphens: auto; /* Переносы слов для красоты ширины */
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            .card p { text-align: left; } /* На телефонах выравнивание по ширине отключаем */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Памятка: Система маркеров отбора</h1>
+    
+    <div class="grid">
+        <div class="card card-experience">
+            <div class="icon">📈</div>
+            <h2>Маркеры опыта и достижения</h2>
+            <p>
+                Фокусируетесь на глаголах действия и численных показателях, которые указывают на реальные результаты. Вместо определения «отвечал за продажи» установите маркер «увеличил продажи на 20 процентов», «сократил расходы на 15 процентов, внедрил новую систему учета». Так определите не только наличие опыта, но и качество и результативность.
+            </p>
+        </div>
+
+        <div class="card card-education">
+            <div class="icon">🎓</div>
+            <h2>Маркеры образования и сертификации</h2>
+            <p>
+                Введите в систему названия конкретных вузов, специализированных курсов, или отраслевых сертификатов. Эти маркеры проверят квалификацию и выделят кандидатов, которые инвестировали в свое развитие.
+            </p>
+        </div>
+
+        <div class="card card-stop">
+            <div class="icon">🚫</div>
+            <h2>Маркеры исключения (стоп-маркеры)</h2>
+            <p>
+                Помогут отсеять кандидатов, которые не соответствуют базовым требованиям. Вносите сюда маркеры, которые указывают на отсутствие критически важных навыков, или связанны с местоположением, уровнем зарплаты - если это жесткие критерии. Контролируйте список стоп-маркеров, иначе отклоните сильных кандидатов по не существенным причинам.
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
